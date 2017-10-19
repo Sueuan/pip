@@ -253,13 +253,13 @@ html {
 .book_box ul  li .box4_font {
     position: absolute;
     left: 1.2rem;
-    top: 9.3rem;
+    bottom: 1.5rem;
     width:3.14rem;
 }
 .book_box ul  li .box4_font2 {
     position: absolute;
     left: 1.2rem;
-    top: 9.3rem;
+    bottom: 1.5rem;
     width:4.62rem;
 }
 .book_box ul li:nth-child(1) {
