@@ -34,6 +34,18 @@
     autoPlayAudio();
 </script>
 <script>
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isiOS) {
+// 禁止iphone浏览器拖动反弹（橡皮筋效果）
+        function stopScrolling(touchEvent) {
+            touchEvent.preventDefault();
+        }
+        document.addEventListener('touchstart', stopScrolling, false);
+        document.addEventListener('touchmove', stopScrolling, false);
+        //  alert(123);
+    }
     var htmls = document.getElementsByTagName('html')[0];
     var deviceWidth = document.documentElement.clientWidth;
     htmls.style.fontSize = deviceWidth * (100 / 750) + 'px';
@@ -49,22 +61,6 @@
         }
     };
 
-</script>
-<script>
-    function isScroller(el) {
-
-        // 判断元素是否为 scroller
-        return el.classList.contains('scroller')
-    }
-
-    document.body.addEventListener('touchmove', function (ev) {
-        var target = ev.target
-
-        // 在 scroller 上滑动，阻止事件冒泡，启用浏览器默认行为。
-        if (isScroller(target)) {
-            ev.stopPropagation()
-        }
-    }, false)
 </script>
 <script type="text/javascript">
     window._pt_lt = new Date().getTime();
