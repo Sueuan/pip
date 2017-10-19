@@ -46,7 +46,9 @@
         document.addEventListener('touchmove', stopScrolling, false);
         //  alert(123);
     }*/
-    var htmls = document.getElementsByTagName('html')[0];
+   
+  
+  var htmls = document.getElementsByTagName('html')[0];
     var deviceWidth = document.documentElement.clientWidth;
     htmls.style.fontSize = deviceWidth * (100 / 750) + 'px';
     if (parseInt($('html').css('fontSize')) > 100) {
@@ -76,7 +78,7 @@
         s.parentNode.insertBefore(atag, s);
     })();
 </script>
-<body>
+<body >
 <div id="audio_btn" class="off rotate" data-event="11205" style="display: none;">
     <audio loop="loop" src="source/music_1.mp3" id="media" autoplay></audio>
 </div>
@@ -159,4 +161,10 @@
 <script src="js/my.js"></script>
 <script src="js/touch.js"></script>
 </body>
+<script>
+    document.addEventListener('touchmove',function(e){
+        vare=e||event;
+        e.preventDefault();
+    },false);
+</script>
 </html>
