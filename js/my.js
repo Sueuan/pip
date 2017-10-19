@@ -221,7 +221,7 @@ $(".btn_box").on("click", function () {
 $(function () {
     setTimeout(function () {
         $(".loading").hide();
-        $(".pip_warp").show();
+        $(".book_box").show();
         $("#audio_btn").show();
         $(".img_2").css({"width": 7.5 * k0 + "rem", "top": -4.17 * k0 + "rem", "left": -1.14 * k0 + "rem"});
     }, 3500);

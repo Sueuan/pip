@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>画中画</title>
+    <title>画中画1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
@@ -34,7 +34,7 @@
     autoPlayAudio();
 </script>
 <script>
-    var u = navigator.userAgent, app = navigator.appVersion;
+  /*  var u = navigator.userAgent, app = navigator.appVersion;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     if (isiOS) {
@@ -45,7 +45,7 @@
         document.addEventListener('touchstart', stopScrolling, false);
         document.addEventListener('touchmove', stopScrolling, false);
         //  alert(123);
-    }
+    }*/
     var htmls = document.getElementsByTagName('html')[0];
     var deviceWidth = document.documentElement.clientWidth;
     htmls.style.fontSize = deviceWidth * (100 / 750) + 'px';
@@ -81,11 +81,11 @@
     <audio loop="loop" src="source/music_1.mp3" id="media" autoplay></audio>
 </div>
 <div style="display: block;" class="loading"></div>
-<div class="book_box">
+<div style="display: none" class="book_box">
     <!--翻书效果-->
     <ul style="display: block">
         <li id="box">
-            <div style="display: none" class="warp pip_warp">
+            <div  class="warp pip_warp">
                 <!--第一页-->
                 <div class=" page page1 scale1" style="display: block;">
                     <img class="img_2" src="images/2.jpg" alt=""/>
